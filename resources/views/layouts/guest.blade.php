@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <header>
     <div class="navbar bg-[#1A4D2E]">
         <div class="flex-1 translate-x-10">
             <img src="/image/lg-bumil.png" class="w-[54px]" />
@@ -17,9 +18,10 @@
         </div>
         <div class="flex-1 ">
             <ul class="menu menu-horizontal px-1">
-                <li><a class="text-2xl text-cl-olgreen">Home</a></li>
-                <li><a class="text-2xl text-cl-olgreen">Layanan Publik</a></li>
-                <li>
+                <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Home</a></li>
+                <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Layanan Publik</a></li>
+                <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Informasi</a></li>
+                {{-- <li>
                     <details>
                       <summary class="text-2xl text-cl-olgreen">
                         Parent
@@ -29,16 +31,20 @@
                         <li><a class="text-2xl">Link 2</a></li>
                       </ul>
                     </details>
-                  </li>
-                <li><a class="text-2xl text-cl-olgreen">Profil</a></li>
+                  </li> --}}
+                <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Profil</a></li>
+                <li class="pl-5"><a class="border-2 text-2xl text-cl-olgreen no-underline hover:underline">Sign in</a></li>
 
             </ul>
         </div>
     </div>
-
-    <div class="bg-[#FBFADA] min-h-[82vh]" style="display: flex; justify-content:center; align-items:center">
-        <img src="/image/logo-posyandu-lg.png" alt="" class="w-[300px]" >
+  </header>
+    
+    <div class="bg-[#FBFADA] min-h-[100vh]">
+      {{-- <img src="/image/logo-posyandu-lg.png" alt="" class="w-[300px]" > --}}
+      @yield('konten')
     </div>
+
 </body>
 
 </html>

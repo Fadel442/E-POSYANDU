@@ -17,7 +17,8 @@ export default {
                 'posyandu-bg': "url('./public/image/lb-posyandu.png')",
             },
             colors: {
-                'cl-olgreen' : '#FBFADA'
+                'cl-olgreen' : '#FBFADA',
+                'cl-matcha' : '#1A4D2E',
             },
         },
     },
