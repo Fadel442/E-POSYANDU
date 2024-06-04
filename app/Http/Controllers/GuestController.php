@@ -10,4 +10,9 @@ class GuestController extends Controller
     {
         return view('layanan publik');
     }
+
+    public function adminDashboard()
+    {
+        return view('admins.admin-dashboard');
+    }
 }

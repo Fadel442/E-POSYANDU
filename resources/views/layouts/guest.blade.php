@@ -33,8 +33,7 @@
                     </details>
                   </li> --}}
                 <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Profil</a></li>
-                <li class="pl-5"><a class="border-2 text-2xl text-cl-olgreen no-underline hover:underline">Sign in</a></li>
-
+                <li class=""><a class="border-2 text-2xl text-cl-olgreen">Sign in</a></li>
             </ul>
         </div>
     </div>

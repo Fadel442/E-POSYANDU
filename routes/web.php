@@ -10,3 +10,4 @@ Route::get('/', function () {
 
 Route::get('/login', [AuthController::class, 'login']);
 Route::get('/alur-layanan', [GuestController::class, 'alurLayanan']);
+Route::get('/admin/dashboard', [GuestController::class, 'adminDashboard']);
