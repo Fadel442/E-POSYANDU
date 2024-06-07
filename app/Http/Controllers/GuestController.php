@@ -11,8 +11,18 @@ class GuestController extends Controller
         return view('layanan publik');
     }
 
-    public function adminDashboard()
+    public function wargaDashboard()
     {
-        return view('admins.admin-dashboard');
+        return view('warga.warga-dashboard');
+    }
+
+    public function wargaJadwal()
+    {
+        return view('warga.warga-jadwal');
+    }
+
+    public function wargaDetailJadwal()
+    {
+        return view('warga.warga-detail-jadwal');
     }
 }

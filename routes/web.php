@@ -10,4 +10,6 @@ Route::get('/', function () {
 
 Route::get('/login', [AuthController::class, 'login']);
 Route::get('/alur-layanan', [GuestController::class, 'alurLayanan']);
-Route::get('/admin/dashboard', [GuestController::class, 'adminDashboard']);
+Route::get('/warga/dashboard', [GuestController::class, 'wargaDashboard']);
+Route::get('/warga/jadwal', [GuestController::class, 'wargaJadwal']);
+Route::get('/warga/detail-jadwal', [GuestController::class, 'wargaDetailJadwal']);
