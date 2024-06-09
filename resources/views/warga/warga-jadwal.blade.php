@@ -2,7 +2,7 @@
 
 @section('konten')
 
-<div class="w-[30%] bg-[#1A4D2E] mt-10 p-2 rounded-lg text-center ">
+<div class="w-[30%] bg-[#1A4D2E] mt-10 p-2 text-center ">
     <p class="text-white font-bold text-3xl">Jadwal</p>
 </div>
 

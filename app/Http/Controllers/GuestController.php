@@ -25,4 +25,14 @@ class GuestController extends Controller
     {
         return view('warga.warga-detail-jadwal');
     }
+
+    public function wargaVaksin()
+    {
+        return view('warga.warga-vaksin');
+    }
+
+    public function wargaPengumunan()
+    {
+        return view('warga.warga-pengumuman');
+    }
 }
