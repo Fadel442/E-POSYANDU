@@ -18,8 +18,8 @@
         </div>
         <div class="flex-1 ">
             <ul class="menu menu-horizontal px-1">
-                <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Home</a></li>
-                <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Layanan Publik</a></li>
+                <li><a href="{{route ('home')}}" class="text-2xl text-cl-olgreen no-underline hover:underline">Home</a></li>
+                <li><a href="{{route ('alur-layanan')}}" class="text-2xl text-cl-olgreen no-underline hover:underline">Layanan Publik</a></li>
                 <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Informasi</a></li>
                 {{-- <li>
                     <details>
@@ -33,7 +33,7 @@
                     </details>
                   </li> --}}
                 <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Profil</a></li>
-                <li class=""><a class="border-2 text-2xl text-cl-olgreen">Sign in</a></li>
+                <li class=""><a href="{{route ('user-login')}}" class="border-2 text-2xl text-cl-olgreen">Sign in</a></li>
             </ul>
         </div>
     </div>

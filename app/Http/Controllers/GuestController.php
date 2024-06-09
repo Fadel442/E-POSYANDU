@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class GuestController extends Controller
 {
+    public function landingPage()
+    {
+        return view('home');
+    }
+
     public function alurLayanan()
     {
         return view('layanan publik');
@@ -34,5 +39,20 @@ class GuestController extends Controller
     public function wargaPengumunan()
     {
         return view('warga.warga-pengumuman');
+    }
+
+    public function adminSession()
+    {
+        return view('admin.admin-session');
+    }
+
+    public function adminDashboard()
+    {
+        return view('admin.admin-dashboard');
+    }
+
+    public function adminInputUser()
+    {
+        return view('admin.admin-inputUser');
     }
 }
