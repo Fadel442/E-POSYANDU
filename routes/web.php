@@ -23,3 +23,9 @@ Route::get('/warga/pengumuman', [GuestController::class, 'wargaPengumunan'])->na
 Route::get('/admin/session', [GuestController::class, 'adminSession']);
 Route::get('/admin/dashboard', [GuestController::class, 'adminDashboard']);
 Route::get('/admin/user/baru', [GuestController::class, 'adminInputUser'])->name('user-baru');
+
+//dummyroute
+Route::get('/dummyregister',[GuestController::class, 'viewDummyRegister'])->name('dummyregister');
+Route::post('/dummyregister',[GuestController::class, 'registerWarga'])->name('admin.register');
+Route::get('/dummylogin',[GuestController::class, 'viewDummyLogin'])->name('dummylogin');
+Route::post('/dummylogin',[GuestController::class, 'loginWarga'])->name('loginwarga');
