@@ -16,11 +16,11 @@
                     <div class="grid gap-6 mb-6">
                         <div>
                             <label class="text-sm font-medium text-[#333333]" for="">Username</label><br>
-                            <input type="text" placeholder="" class="bg-transparent border border-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
+                            <input type="text" placeholder="" name="nik" id="nik" class="bg-transparent border border-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
                         </div>
                         <div>
                             <label class="text-sm font-medium text-[#333333]" for="">Password</label><br>
-                            <input type="password" placeholder="" class="bg-transparent border border-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
+                            <input type="password" placeholder=""  name="password" id="password" class="bg-transparent border border-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
                             <div class="flex justify-end">
                                 <a href="" class="underline pt-2">Forget Your Password</a>
                             </div>
