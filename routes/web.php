@@ -26,8 +26,8 @@ Route::get('/admin/session', [GuestController::class, 'adminSession']);
 Route::get('/admin/dashboard', [GuestController::class, 'adminDashboard']);
 Route::get('/admin/user/baru', [GuestController::class, 'adminInputUser'])->name('user-baru');
 Route::post('/admin/user/baru',[GuestController::class, 'registerWarga'])->name('admin.register');
+Route::get('/admin/vaksin',[VaksinController::class, 'index'])->name('admin-vaksin');
+Route::get('/admin/vaksin/add',[VaksinController::class, 'addVaksin'])->name('addVaksin');
+Route::post('/admin/vaksin/add',[VaksinController::class, 'store'])->name('addV');
 
 //dummyroute
-
-Route::get('/dummyaddvaksin',[VaksinController::class, 'index'])->name('dummyaddvaksin');
-Route::post('/dummyaddvaksin',[VaksinController::class, 'store'])->name('addvaksin');
