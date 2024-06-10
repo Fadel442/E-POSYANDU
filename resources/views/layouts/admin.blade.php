@@ -45,7 +45,7 @@
                 <a href="{{route ('user-baru')}}" class="flex flex-wrap border-b border-white mt-5 mx-5">
                     <span class="w-full text-xl p-0">Input Data Baru</span>
                 </a>
-                <a href="" class="flex flex-wrap border-b border-white my-5 mx-5">
+                <a href="{{route('warga-vaksin')}}" class="flex flex-wrap border-b border-white my-5 mx-5">
                     <span class="w-full text-xl p-0">Vaksin</span>
                 </a>
             </div>
