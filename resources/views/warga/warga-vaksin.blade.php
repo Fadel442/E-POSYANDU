@@ -14,29 +14,36 @@
               <thead>
                 <tr class="bg-[#1A4D2E] text-white">
                   <th>No</th>
-                  <th>Name</th>
+                  <th>Vaksin</th>
                   <th>Jumlah</th>
                 </tr>
               </thead>
               <tbody>
                 <!-- row 1 -->
+                @foreach ($posts as $post)
                 <tr>
+                  <th>{{$post->id}}</th>
+                  <td>{{$post->vaksin}}</td>
+                  <td>{{$post->jumlah}}</td>
+                </tr>
+                @endforeach
+                {{-- <tr>
                   <th>1</th>
                   <td>Cy Ganderton</td>
                   <td>Quality Control Specialist</td>
-                </tr>
+                </tr> --}}
                 <!-- row 2 -->
-                <tr>
+                {{-- <tr>
                   <th>2</th>
                   <td>Hart Hagerty</td>
                   <td>Desktop Support Technician</td>
-                </tr>
+                </tr> --}}
                 <!-- row 3 -->
-                <tr>
+                {{-- <tr>
                   <th>3</th>
                   <td>Brice Swyre</td>
                   <td>Tax Accountant</td>
-                </tr>
+                </tr> --}}
               </tbody>
             </table>
           </div>

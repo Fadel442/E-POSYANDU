@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GuestController;
+use App\Http\Controllers\VaksinController;
 
 Route::get('/', function () {
     return view('home');
@@ -29,3 +30,5 @@ Route::get('/dummyregister',[GuestController::class, 'viewDummyRegister'])->name
 Route::post('/dummyregister',[GuestController::class, 'registerWarga'])->name('admin.register');
 Route::get('/dummylogin',[GuestController::class, 'viewDummyLogin'])->name('dummylogin');
 Route::post('/dummylogin',[GuestController::class, 'loginWarga'])->name('loginwarga');
+Route::get('/dummyaddvaksin',[VaksinController::class, 'index'])->name('dummyaddvaksin');
+Route::post('/dummyaddvaksin',[VaksinController::class, 'store'])->name('addvaksin');

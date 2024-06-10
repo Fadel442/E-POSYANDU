@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Vaksin;
 use App\Models\Warga;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -37,7 +38,8 @@ class GuestController extends Controller
 
     public function wargaVaksin()
     {
-        return view('warga.warga-vaksin');
+        $posts = Vaksin::all();
+        return view('warga.warga-vaksin',['posts' => $posts]);
     }
 
     public function wargaPengumunan()
