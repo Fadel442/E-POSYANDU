@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>DUMMY LOGIN</h1>
-    <form action="{{route('dummylogin')}}" method="POST">
+    <form action="{{route('loginwarga')}}" method="POST">
         @csrf
         <p>NIK</p><br>
         <input type="text" name="nik" id="nik">
