@@ -22,9 +22,9 @@ Route::get('/warga/vaksin', [GuestController::class, 'wargaVaksin'])->name('warg
 Route::get('/warga/pengumuman', [GuestController::class, 'wargaPengumunan'])->name('warga-pengumuman');
 
 //admin
-Route::get('/admin/session', [GuestController::class, 'adminSession']);
-Route::get('/admin/dashboard', [GuestController::class, 'adminDashboard']);
-Route::get('/admin/user/baru', [GuestController::class, 'adminInputUser'])->name('user-baru');
+Route::get('/admin/session', [GuestController::class, 'adminSession'])->middleware('role:admin');
+Route::get('/admin/dashboard', [GuestController::class, 'adminDashboard'])->name('admindashboard')->middleware('role:admin');
+Route::get('/admin/user/baru', [GuestController::class, 'adminInputUser'])->name('user-baru')->middleware('role:admin');
 
 //dummyroute
 Route::get('/dummyregister',[GuestController::class, 'viewDummyRegister'])->name('dummyregister');

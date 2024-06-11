@@ -8,6 +8,7 @@ use App\Models\Warga;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class GuestController extends Controller
 {
@@ -72,7 +73,9 @@ class GuestController extends Controller
         $data = $request->except('password');
         $data['password'] = Hash::make($request->password);
         // Warga::create($data);
-        User::create($data);
+        $user = User::create($data);
+        $role = Role::whereName('warga')->first();
+        $user->assignRole($role);
         return redirect('/admin/dashboard');
     }
 
@@ -85,7 +88,13 @@ class GuestController extends Controller
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended(route('warga-dashboard'));
+            $user = Auth::user();
+            if($user->hasRole('warga')){
+                return redirect()->intended(route('warga-dashboard'));
+            }elseif($user->hasRole('admin')){
+                return redirect()->intended(route('admindashboard'));
+            }
+            //abaikan error di hasRole masih bisa jalan kok
         }
 
         return back()->withErrors([
