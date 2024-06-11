@@ -93,11 +93,13 @@ class GuestController extends Controller
         ]);
     }
 
-    public function viewDummyRegister(){
-        return view('dummyregister');
+    public function dummyJadwalInput()
+    {
+        return view('admin.admin-inputJadwal');
     }
 
-    public function viewDummyLogin(){
-        return view('dummylogin');
+    public function dummyLokasi()
+    {
+        return view('admin.admin-inputLokasi');
     }
 }
