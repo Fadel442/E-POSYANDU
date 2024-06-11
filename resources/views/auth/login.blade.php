@@ -1,10 +1,9 @@
 @extends('layouts.guest')
 
 @section('konten')
-
     <div class="flex w-full justify-between">
         <div class="flex items-start min-h-screen pl-10 w-[50%]">
-            <img class="mt-60"  src="/image/lg-e-posyandu.png" alt="">
+            <img class="mt-60" src="/image/lg-e-posyandu.png" alt="">
             <img class="brightness-50 blur-sm " src="/image/logo-posyandu-lg.png" alt="">
         </div>
         <div class="w-[50%]">
@@ -32,4 +31,4 @@
             </form>
         </div>
     </div>
-@endsection 
+@endsection
