@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GuestController;
+use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\VaksinController;
 
 Route::get('/', function () {
@@ -30,6 +31,7 @@ Route::get('/admin/vaksin',[VaksinController::class, 'index'])->name('admin-vaks
 Route::get('/admin/vaksin/add',[VaksinController::class, 'addVaksin'])->name('addVaksin')->middleware(['role:admin']);
 Route::post('/admin/vaksin/add',[VaksinController::class, 'store'])->name('addV')->middleware(['role:admin']);
 Route::get('/admin/jadwal/baru', [GuestController::class, 'dummyJadwalInput'])->name('jadwal-baru')->middleware(['role:admin']);
+Route::post('/admin/jadwal/baru', [JadwalController::class, 'addJadwal'])->name('addjadwal')->middleware(['role:admin']);
 Route::get('/admin/jadwal/baru/lokasi', [GuestController::class, 'dummyLokasi'])->name('lokasi-baru')->middleware(['role:admin']);
 
 //dummyroute
