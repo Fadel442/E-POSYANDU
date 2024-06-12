@@ -30,7 +30,7 @@
                     </div>
                     <div class="flex">
                         <ul class="menu menu-horizontal px-1 mt-1">
-                            <li><a href="{{route ('warga-dashboard')}}" class="text-2xl font-semibold text-[#1A4D2E] no-underline hover:underline">Home</a></li>
+                            <li><a href="{{route ('user')}}" class="text-2xl font-semibold text-[#1A4D2E] no-underline hover:underline">Home</a></li>
                             <li><a href="{{route ('warga-pengumuman')}}" class="text-2xl font-semibold text-[#1A4D2E] no-underline hover:underline">Pengumuman</a></li>
                             <li><a href="{{route ('warga-jadwal')}}" class="text-2xl font-semibold text-[#1A4D2E] no-underline hover:underline">Jadwal</a></li>
                             <li><a href="{{route ('warga-vaksin')}}" class="text-2xl font-semibold text-[#1A4D2E] no-underline hover:underline">Vaksin</a></li>

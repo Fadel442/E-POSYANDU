@@ -33,7 +33,7 @@
                     </details>
                   </li> --}}
                 <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Profil</a></li>
-                <li class=""><a href="{{route ('user-login')}}" class="border-2 text-2xl text-cl-olgreen">Sign in</a></li>
+                <li class=""><a href="/login" class="border-2 text-2xl text-cl-olgreen">Sign in</a></li>
             </ul>
         </div>
     </div>

@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Vaksin;
 use App\Models\Warga;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class GuestController extends Controller
 {
+
+    use AuthenticatesUsers;
+
     public function landingPage()
     {
         return view('home');
@@ -85,8 +89,17 @@ class GuestController extends Controller
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended(route('warga-dashboard'));
+
+             // Redirect based on user role
+             if (auth()->user()->role === 'admin') {
+                return redirect()->route('admin');
+            } elseif (auth()->user()->role === 'bidan') {
+                return redirect()->route('bidan');
+            } else {
+                return redirect()->route('user');
+            }
         }
+        // return redirect()->intended(route('warga-dashboard'));
 
         return back()->withErrors([
             'nik' => 'Maaf NIK tidak sesuai',

@@ -12,6 +12,9 @@
             </div>
             <form action="{{route('admin.register')}}" method="POST">
                 @csrf
+                <div>
+                    <input type="hidden" name="role" id="role" value="2">
+                  </div>
                 <div class="mb-2">
                     <label class="text-sm font-medium text-white" for="">NAMA LENGKAP</label><br>
                     <input type="text" placeholder="" id="name" name="name" class="bg-white border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
