@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\VaksinController;
+use App\Http\Controllers\JadwalController;
 
 Route::get('/', function () {
     return view('home');
@@ -27,7 +28,8 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/vaksin', [VaksinController::class, 'index'])->name('admin-vaksin');
     Route::get('/admin/vaksin/add', [VaksinController::class, 'addVaksin'])->name('addVaksin');
     Route::post('/admin/vaksin/add', [VaksinController::class, 'store'])->name('addV');
-    Route::get('/admin/jadwal/baru', [GuestController::class, 'dummyJadwalInput'])->name('jadwal-baru');
+    Route::get('/admin/jadwal', [GuestController::class, 'dummyJadwalInput'])->name('jadwal-baru');
+    Route::post('/admin/jadwal/baru', [JadwalController::class, 'addJadwal'])->name('add-jadwal');
     Route::get('/admin/jadwal/baru/lokasi', [GuestController::class, 'dummyLokasi'])->name('lokasi-baru');
 });
 
