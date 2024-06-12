@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Vaksin;
 use App\Models\Warga;
+use App\Models\Jadwal;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -32,7 +33,8 @@ class GuestController extends Controller
 
     public function wargaJadwal()
     {
-        return view('warga.warga-jadwal');
+        $posts = Jadwal::all();
+        return view('warga.warga-jadwal',['posts' => $posts]);
     }
 
     public function wargaDetailJadwal()
