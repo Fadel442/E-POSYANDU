@@ -22,14 +22,14 @@ Route::get('/warga/vaksin', [GuestController::class, 'wargaVaksin'])->name('warg
 Route::get('/warga/pengumuman', [GuestController::class, 'wargaPengumunan'])->name('warga-pengumuman');
 
 //admin
-Route::get('/admin/session', [GuestController::class, 'adminSession'])->middleware('role:admin');
-Route::get('/admin/dashboard', [GuestController::class, 'adminDashboard'])->name('admindashboard')->middleware('role:admin');
-Route::get('/admin/user/baru', [GuestController::class, 'adminInputUser'])->name('user-baru')->middleware('role:admin');
+Route::get('/admin/session', [GuestController::class, 'adminSession']);
+Route::get('/admin/dashboard', [GuestController::class, 'adminDashboard']);
+Route::get('/admin/user/baru', [GuestController::class, 'adminInputUser'])->name('user-baru');
+Route::post('/admin/user/baru',[GuestController::class, 'registerWarga'])->name('admin.register');
+Route::get('/admin/vaksin',[VaksinController::class, 'index'])->name('admin-vaksin');
+Route::get('/admin/vaksin/add',[VaksinController::class, 'addVaksin'])->name('addVaksin');
+Route::post('/admin/vaksin/add',[VaksinController::class, 'store'])->name('addV');
+Route::get('/admin/jadwal/baru', [GuestController::class, 'dummyJadwalInput'])->name('jadwal-baru');
+Route::get('/admin/jadwal/baru/lokasi', [GuestController::class, 'dummyLokasi'])->name('lokasi-baru');
 
 //dummyroute
-Route::get('/dummyregister',[GuestController::class, 'viewDummyRegister'])->name('dummyregister');
-Route::post('/dummyregister',[GuestController::class, 'registerWarga'])->name('admin.register');
-Route::get('/dummylogin',[GuestController::class, 'viewDummyLogin'])->name('dummylogin');
-// Route::post('/dummylogin',[GuestController::class, 'loginWarga'])->name('loginwarga');
-Route::get('/dummyaddvaksin',[VaksinController::class, 'index'])->name('dummyaddvaksin');
-Route::post('/dummyaddvaksin',[VaksinController::class, 'store'])->name('addvaksin');

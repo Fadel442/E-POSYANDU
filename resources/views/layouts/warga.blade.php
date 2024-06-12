@@ -26,7 +26,7 @@
                 <div class="grid grid-flow-row auto-rows-max">
                     <div class="flex ml-5 mt-10">
                         <img src="/image/lg-profil.png" class="w-[30px] h-[30px]" alt="">
-                        <p class="text-[#989898] font-semibold pl-1.5">Selamat Datang, Warga</p>
+                        <p class="text-[#989898] font-semibold pl-1.5">Selamat Datang, {{auth()->user()->name}}</p>
                     </div>
                     <div class="flex">
                         <ul class="menu menu-horizontal px-1 mt-1">

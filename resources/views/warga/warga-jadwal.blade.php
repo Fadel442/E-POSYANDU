@@ -14,7 +14,7 @@
                 <p class="text-white font-semibold text-m flex flex-wrap border-b border-white ">Januari Tahun 2024</p>
                 <p class="text-white font-light text-sm mt-1">DESA SUKOMANUNGGAL. KEC ABONSARI</p>
                 <div class="flex align-content-end">
-                    <a href="{{route(detail-jadwal)}}" class="text-white font-semibold text-sm mt-2">Lihat Selengkapnya</a>
+                    <a href="{{route ('detail-jadwal')}}" class="text-white font-semibold text-sm mt-2">Lihat Selengkapnya</a>
                 </div>
             </div>
         </div>

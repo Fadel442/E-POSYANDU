@@ -9,7 +9,12 @@ use Illuminate\Http\Request;
 class VaksinController extends Controller
 {
     public function index(){
-        return view('dummyaddvaksin');
+        $posts = Vaksin::all();
+        return view('admin.admin-manajemenVaksin', compact('posts'));
+    }
+
+    public function addVaksin(){
+        return view('admin.admin-tambahVaksin');
     }
 
     public function store(Request $request){
@@ -21,6 +26,6 @@ class VaksinController extends Controller
         $data['jumlah'] = (int) $request->jumlah;
         // Warga::create($data);
         Vaksin::create($data);
-        return redirect('/warga/vaksin');
+        return redirect()->route('admin-vaksin');
     }
 }

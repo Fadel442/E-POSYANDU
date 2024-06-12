@@ -14,7 +14,7 @@
                 @csrf
                 <div class="mb-2">
                     <label class="text-sm font-medium text-white" for="">NAMA LENGKAP</label><br>
-                    <input type="text" placeholder="" id="name" name="name" class="bg-white border border-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
+                    <input type="text" placeholder="" id="name" name="name" class="bg-white border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
                 </div>
                 <div class="mb-2">
                     <label class="text-sm font-medium text-white" for="">NIK</label><br>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="mb-2">
                     <label class="text-sm font-medium text-white" for="">PASSWORD</label><br>
-                    <input type="password" placeholder="" id="password" name="password" class="bg-white border border-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
+                    <input type="password" placeholder="" id="password" name="password" class="bg-white border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
                 </div>
                 <div class="container py-5 px-10 min-w-full flex flex-col items-end">
                     <button type="submit" class="text-white bg-[#4F6F52] font-medium rounded-lg  px-5 py-2.5 text-center me-2 mb-2">Confrirm</button>
