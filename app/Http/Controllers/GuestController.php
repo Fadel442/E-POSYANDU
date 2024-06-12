@@ -92,7 +92,7 @@ class GuestController extends Controller
             if($user->hasRole('warga')){
                 return redirect()->intended(route('warga-dashboard'));
             }elseif($user->hasRole('admin')){
-                return redirect()->intended(route('admindashboard'));
+                return redirect()->intended(route('adminDashboard'));
             }
             //abaikan error di hasRole masih bisa jalan kok
         }

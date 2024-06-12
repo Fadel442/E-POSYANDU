@@ -34,6 +34,10 @@
                             <li><a href="{{route ('warga-pengumuman')}}" class="text-2xl font-semibold text-[#1A4D2E] no-underline hover:underline">Pengumuman</a></li>
                             <li><a href="{{route ('warga-jadwal')}}" class="text-2xl font-semibold text-[#1A4D2E] no-underline hover:underline">Jadwal</a></li>
                             <li><a href="{{route ('warga-vaksin')}}" class="text-2xl font-semibold text-[#1A4D2E] no-underline hover:underline">Vaksin</a></li>
+                            <form action="{{route ('logout')}}" method="POST">
+                                @csrf
+                                <button type="submit" class="class="border-2 text-2xl text-cl-olgreen"">Logout</button>
+                            </form>
                         </ul>
                     </div>
                 </div>

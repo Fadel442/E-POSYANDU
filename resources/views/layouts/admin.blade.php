@@ -26,7 +26,7 @@
                 <div class="grid grid-flow-row auto-rows-max">
                     <div class="flex ml-5">
                         <img src="/image/lg-profil.png" class="w-[30px] h-[30px]" alt="">
-                        <p class="text-black font-semibold pl-1.5">Halo, Admin</p>
+                        <p class="text-black font-semibold pl-1.5">Halo, {{auth()->user()->name}}</p>
                     </div>
                 </div>
             </div>
