@@ -16,6 +16,6 @@ class JadwalController extends Controller
         $jadwal->bulan = $request->bulan;
         $jadwal->tahun = $request->tahun;
         $jadwal->save();
-        return redirect('/admin/jadwal');
+        return redirect('/admin/jadwal/baru/lokasi');
     }
 }
