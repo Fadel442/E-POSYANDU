@@ -20,7 +20,7 @@
                     <input type="text" placeholder="" id="name" name="name" class="bg-white border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
                 </div>
                 <div class="mb-2">
-                    <label class="text-sm font-medium text-white" for="">USER ID</label><br>
+                    <label class="text-sm font-medium text-white" for="">NIK</label><br>
                     <input type="text" placeholder="" id="nik" name="nik" class="bg-white border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
                 </div>
                 <div class="mb-2">

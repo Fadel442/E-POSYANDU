@@ -30,7 +30,7 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::post('/admin/vaksin/add', [VaksinController::class, 'store'])->name('addV');
     Route::get('/admin/jadwal', [GuestController::class, 'dummyJadwalInput'])->name('jadwal-baru');
     Route::post('/admin/jadwal/baru', [JadwalController::class, 'addJadwal'])->name('add-jadwal');
-    Route::get('/admin/jadwal/baru/lokasi', [GuestController::class, 'dummyLokasi'])->name('lokasi-baru');
+    // Route::get('/admin/jadwal/baru/lokasi', [GuestController::class, 'dummyLokasi'])->name('lokasi-baru');
 });
 
 Route::middleware(['auth', 'roles:user'])->group(function () {
