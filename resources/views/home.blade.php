@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+    @extends('layouts.guest')
 
 @section('konten')
 
@@ -14,13 +14,10 @@
         </div>
         <div class="text-black w-[50%] px-32"> 
             <a href="" class="flex flex-wrap border-b border-black mt-3 text-cl-matcha">
-                <span class="w-full text-xl p-0">Kategori Media</span>
+                <span class="w-full text-xl p-0">Gallery</span>
             </a>
             <a href="" class="flex flex-wrap border-b border-black mt-3 text-cl-matcha">
-                <p class="w-full text-xl ">Gallery</p>
-            </a>
-            <a href="" class="flex flex-wrap border-b border-black mt-32 text-cl-matcha">
-                <p class="w-full text-xl ">Gallery</p>
+                <p class="w-full text-xl ">Pengumuman</p>
             </a>
         </div>
     </div>

@@ -36,16 +36,16 @@
     <main class="mt-10">
         <div class="flex">
             <div class="flex-initial w-[200px] h-[290px] bg-[#898989] rounded-lg text-white ml-7 mr-">
-                <a href="" class="flex flex-wrap border-b border-white mt-5 mx-5 ">
-                    <span class="w-full text-xl p-0">Pengumuman</span>
+                <a href="{{route('admin')}}" class="flex flex-wrap border-b border-white mt-5 mx-5 ">
+                    <span class="w-full text-xl p-0">Dashboard</span>
                 </a>
-                <a href="" class="flex flex-wrap border-b border-white mt-5 mx-5 ">
-                    <span class="w-full text-xl p-0">Laporan</span>
+                <a href="{{route('daftar')}}" class="flex flex-wrap border-b border-white mt-5 mx-5 ">
+                    <span class="w-full text-xl p-0">Pendaftaran</span>
                 </a>
-                <a href="" class="flex flex-wrap border-b border-white mt-5 mx-5 ">
-                    <span class="w-full text-xl p-0">Input Data Pemeriksaan</span>
+                <a href="{{route('master')}}" class="flex flex-wrap border-b border-white mt-5 mx-5 ">
+                    <span class="w-full text-xl p-0">Master</span>
                 </a>
-                <a href="{{route ('user-baru')}}" class="flex flex-wrap border-b border-white mt-5 mx-5">
+                {{-- <a href="{{route ('user-baru')}}" class="flex flex-wrap border-b border-white mt-5 mx-5">
                     <span class="w-full text-xl p-0">Input User Baru</span>
                 </a>
                 <a href="{{route ('jadwal-baru')}}" class="flex flex-wrap border-b border-white mt-5 mx-5">
@@ -53,7 +53,7 @@
                 </a>
                 <a href="{{route ('admin-vaksin')}}" class="flex flex-wrap border-b border-white my-5 mx-5">
                     <span class="w-full text-xl p-0">Vaksin</span>
-                </a>
+                </a> --}}
             </div>
             @yield('konten')
         </div>

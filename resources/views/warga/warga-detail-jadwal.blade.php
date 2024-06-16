@@ -28,16 +28,16 @@
                                     <p class="text-black font-bold text-3xl  ">RW 1 Gedangan</p>
                                 </div>
                             </div>
-                            <div class="mt-8 mx-5">
+                            {{-- <div class="mt-8 mx-5">
                                 <p>Senin, 1 Maret 2024</p>
                                 <div class="w-full bg-white p-2  rounded-lg text-center ">
                                     <p class="text-black font-bold text-3xl  ">RW 1 Gedangan</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="w-[30%]">
+                        </div> --}}
+                        {{-- <div class="w-[30%]"> --}}
 
-                        </div>
+                        {{-- </div>
                         <div class="grid grid-rows-2 ">
                             <div class="mt-8 mx-5">
                                 <p>Senin, 1 Maret 2024</p>
@@ -51,7 +51,7 @@
                                     <p class="text-black font-bold text-3xl  ">RW 1 Gedangan</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                 
                 </div>
         </div>

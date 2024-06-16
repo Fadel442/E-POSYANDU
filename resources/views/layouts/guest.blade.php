@@ -16,23 +16,10 @@
             <img src="/image/lg-bumil.png" class="w-[54px]" />
             <a class="text-4xl text-cl-olgreen pl-10">E-POSYANDU</a>
         </div>
-        <div class="flex-1 ">
+        <div class="flex-1 justify-end">
             <ul class="menu menu-horizontal px-1">
                 <li><a href="{{route ('home')}}" class="text-2xl text-cl-olgreen no-underline hover:underline">Home</a></li>
                 <li><a href="{{route ('alur-layanan')}}" class="text-2xl text-cl-olgreen no-underline hover:underline">Layanan Publik</a></li>
-                <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Informasi</a></li>
-                {{-- <li>
-                    <details>
-                      <summary class="text-2xl text-cl-olgreen">
-                        Parent
-                      </summary>
-                      <ul class="p-2 bg-base-100 rounded-t-none">
-                        <li><a class="text-2xl">Link 1</a></li>
-                        <li><a class="text-2xl">Link 2</a></li>
-                      </ul>
-                    </details>
-                  </li> --}}
-                <li><a class="text-2xl text-cl-olgreen no-underline hover:underline">Profil</a></li>
                 <li class=""><a href="/login" class="border-2 text-2xl text-cl-olgreen">Sign in</a></li>
             </ul>
         </div>

@@ -33,7 +33,7 @@
                 </div>
                 <div class="mb-2">
                     <label class="text-sm font-medium text-white" for="">Hari</label><br>
-                    <input type="text" placeholder="" id="jumlah" name="jumlah" class="bg-white border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
+                    <input type="text" placeholder="" id="hari" name="hari" class="bg-white border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
                 </div>
                 <div class="relative max-w-sm mb-2">
                     <label class="text-sm font-medium text-white" for="">Tanggal</label><br>
@@ -42,11 +42,11 @@
                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                       </svg>
                     </div>
-                    <input datepicker type="date" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 " placeholder="Select date">
+                    <input datepicker type="date" name="tanggal" id="tanggal" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 " placeholder="Select date">
                   </div>
                 <div class="mb-2">
                     <label class="text-sm font-medium text-white" for="">LOKASI</label><br>
-                    <input type="text" placeholder="" id="jumlah" name="jumlah" class="bg-white border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
+                    <input type="text" placeholder="" id="lokasi" name="lokasi" class="bg-white border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" />
                 </div>
                 <div class="container py-5 px-10 min-w-full flex flex-col items-end">
                     <button type="submit" class="text-white bg-[#4F6F52] font-medium rounded-lg  px-5 py-2.5 text-center me-2 mb-2">Confrirm</button>

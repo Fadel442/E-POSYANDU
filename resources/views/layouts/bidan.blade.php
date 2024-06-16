@@ -26,23 +26,26 @@
                 <div class="grid grid-flow-row auto-rows-max">
                     <div class="flex ml-5">
                         <img src="/image/lg-profil.png" class="w-[30px] h-[30px]" alt="">
-                        <a href="{{route ('user-login')}}" class="bg-[#1A4D2E] rounded-lg font-semibold text-white w-[100px] mx-10 text-center">Login</a>
+                        <p class="text-black font-semibold pl-1.5">Halo, Bidan</p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="w-[90%] h-full container mx-auto mt-20">
-        <div class="border-2 bg-transparent border-[#1A4D2E]">
-            <div class="flex w-full justify-between">
-                <div class="w-[50%] h-[300px] flex items-center justify-center bg-[#1A4D2E] m-5 ">
-                    <p class="text-white font-semibold text-xl">Istirahat, Jaga Kesehatan</p>
-                </div>
+    <main class="mt-10">
+        <div class="flex">
+            <div class="flex-initial w-[200px] h-[190px] bg-[#898989] rounded-lg text-white ml-7">
+                <a href="{{route('bidan')}}" class="flex flex-wrap border-b border-white mt-5 mx-5 ">
+                    <span class="w-full text-xl p-0">Dashboard</span>
+                </a>
+                <a href="{{route('data')}}" class="flex flex-wrap border-b border-white mt-5 mx-5">
+                    <span class="w-full text-xl p-0">Input Data</span>
+                </a>
             </div>
+            @yield('konten')
         </div>
-    </div>
-
+    </main>
 </body>
 
 </html>
