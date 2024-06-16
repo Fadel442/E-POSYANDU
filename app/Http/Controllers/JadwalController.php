@@ -11,11 +11,17 @@ class JadwalController extends Controller
         $request->validate([
             'bulan' => 'required',
             'tahun' => 'required',
+            'hari'  => 'required',
+            'tanggal' => 'required|date',
+            'lokasi' => 'required'
         ]);
         $jadwal = new Jadwal();
         $jadwal->bulan = $request->bulan;
         $jadwal->tahun = $request->tahun;
+        $jadwal->hari = $request->hari;
+        $jadwal->tanggal = $request->tanggal;
+        $jadwal->lokasi = $request->lokasi;
         $jadwal->save();
-        return redirect('/admin/jadwal');
+        return redirect('/warga/jadwal');
     }
 }

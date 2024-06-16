@@ -26,48 +26,6 @@ class GuestController extends Controller
         return view('layanan publik');
     }
 
-    public function wargaDashboard()
-    {
-        return view('warga.warga-dashboard');
-    }
-
-    public function wargaJadwal()
-    {
-        $posts = Jadwal::all();
-        return view('warga.warga-jadwal',['posts' => $posts]);
-    }
-
-    public function wargaDetailJadwal()
-    {
-        return view('warga.warga-detail-jadwal');
-    }
-
-    public function wargaVaksin()
-    {
-        $posts = Vaksin::all();
-        return view('warga.warga-vaksin',['posts' => $posts]);
-    }
-
-    public function wargaPengumunan()
-    {
-        return view('warga.warga-pengumuman');
-    }
-
-    public function adminSession()
-    {
-        return view('admin.admin-session');
-    }
-
-    public function adminDashboard()
-    {
-        return view('admin.admin-dashboard');
-    }
-
-    public function adminInputUser()
-    {
-        return view('admin.admin-inputUser');
-    }
-
     public function registerWarga(Request $request)
     {
         $validate = $request->validate([
@@ -103,18 +61,6 @@ class GuestController extends Controller
         }
         // return redirect()->intended(route('warga-dashboard'));
 
-        return back()->withErrors([
-            'nik' => 'Maaf NIK tidak sesuai',
-        ]);
-    }
-
-    public function dummyJadwalInput()
-    {
-        return view('admin.admin-inputJadwal');
-    }
-
-    public function dummyLokasi()
-    {
-        return view('admin.admin-inputLokasi');
+        return redirect()->back()->with('error', 'Invalid User ID or Password.');
     }
 }

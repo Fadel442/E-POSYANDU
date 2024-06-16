@@ -13,10 +13,12 @@
             <div>
                 <p class="text-white font-bold text-3xl">Jadwal Posyandu</p>
                 <p class="text-white font-semibold text-m flex flex-wrap border-b border-white ">{{$post->bulan}} Tahun {{$post->tahun}}</p>
-                <p class="text-white font-light text-sm mt-1">DESA SUKOMANUNGGAL. KEC ABONSARI</p>
-                <div class="flex align-content-end">
+                <p class="text-white font-light text-sm mt-1 mb-4 ">DESA SUKOMANUNGGAL. KEC ABONSARI</p>
+                <p class="text-white">{{$post->hari}}, {{$post->tanggal}}</p>
+                <p class="text-white font-bold text-3xl  ">{{$post->lokasi}}</p>
+                {{-- <div class="flex align-content-end">
                     <a href="{{route ('detail-jadwal')}}" class="text-white font-semibold text-sm mt-2">Lihat Selengkapnya</a>
-                </div>
+                </div> --}}
             </div>
         </div>
         @endforeach
