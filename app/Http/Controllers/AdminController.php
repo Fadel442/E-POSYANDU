@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Jadwal;
+use App\Models\Vaksin;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -42,6 +43,7 @@ class AdminController extends Controller
     }
     public function adminVaksin()
     {
-        return view('admin.admin-masterVaksin');
+        $vaksins = Vaksin::all();
+        return view('admin.admin-masterVaksin',['vaksins' => $vaksins]);
     }
 }

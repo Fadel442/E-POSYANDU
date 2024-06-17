@@ -36,6 +36,8 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::post('/admin/master/jadwal', [JadwalController::class, 'addJadwal'])->name('addjadwal');
     Route::delete('/admin/master/jadwal/{id}',[JadwalController::class, 'hapusJadwal'])->name('hapusjadwal');
     Route::get('/admin/master/vaksin', [AdminController::class, 'adminVaksin'])->name('vaksin');
+    Route::post('/admin/master/vaksin', [VaksinController::class, 'tambahVaksin'])->name('tambahvaksin');
+    Route::delete('/admin/master/vaksin/{id}',[VaksinController::class, 'hapusVaksin'])->name('hapusvaksin');
 
 
     // Route::get('/admin/user/baru', [GuestController::class, 'adminInputUser'])->name('user-baru');

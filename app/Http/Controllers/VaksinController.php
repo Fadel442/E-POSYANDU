@@ -8,16 +8,7 @@ use Illuminate\Http\Request;
 
 class VaksinController extends Controller
 {
-    public function index(){
-        $posts = Vaksin::all();
-        return view('admin.admin-manajemenVaksin', compact('posts'));
-    }
-
-    public function addVaksin(){
-        return view('admin.admin-tambahVaksin');
-    }
-
-    public function store(Request $request){
+    public function tambahVaksin(Request $request){
         $validate = $request->validate([
             'vaksin' => 'required',
             'jumlah' => 'required',
@@ -26,6 +17,13 @@ class VaksinController extends Controller
         $data['jumlah'] = (int) $request->jumlah;
         // Warga::create($data);
         Vaksin::create($data);
-        return redirect()->route('admin-vaksin');
+        return redirect()->route('vaksin');
+    }
+
+    public function hapusVaksin(int $id){
+        $jadwal = Vaksin::findOrFail($id);
+        $jadwal->delete();
+
+        return redirect()->route('vaksin')->with('success', 'Jadwal deleted successfully.');
     }
 }
