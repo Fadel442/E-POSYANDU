@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('bulan');
             $table->string('tahun');
+            $table->string('hari');
+            $table->date('tanggal');
+            $table->string('lokasi');
             $table->timestamps();
         });
     }
