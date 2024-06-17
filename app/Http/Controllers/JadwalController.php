@@ -9,19 +9,24 @@ class JadwalController extends Controller
 {
     public function addJadwal(Request $request){
         $request->validate([
-            'bulan' => 'required',
-            'tahun' => 'required',
-            'hari'  => 'required',
+            'tempat' => 'required',
+            'rt' => 'required',
+            'rw' => 'required',
             'tanggal' => 'required|date',
-            'lokasi' => 'required'
         ]);
         $jadwal = new Jadwal();
-        $jadwal->bulan = $request->bulan;
-        $jadwal->tahun = $request->tahun;
-        $jadwal->hari = $request->hari;
+        $jadwal->tempat = $request->tempat;
+        $jadwal->rt = $request->rt;
+        $jadwal->rw = $request->rw;
         $jadwal->tanggal = $request->tanggal;
-        $jadwal->lokasi = $request->lokasi;
         $jadwal->save();
-        return redirect('/warga/jadwal');
+        return redirect('/admin/master/jadwal');
+    }
+
+    public function hapusJadwal(int $id){
+        $jadwal = Jadwal::findOrFail($id);
+        $jadwal->delete();
+
+        return redirect()->route('jadwal')->with('success', 'Jadwal deleted successfully.');
     }
 }

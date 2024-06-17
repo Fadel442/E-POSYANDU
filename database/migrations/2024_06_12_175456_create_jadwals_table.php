@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('jadwals', function (Blueprint $table) {
             $table->id();
-            $table->string('bulan');
-            $table->string('tahun');
-            $table->string('hari');
-            $table->date('tanggal');
-            $table->string('lokasi');
+            $table->string('tempat');
+            $table->string('rt');
+            $table->string('rw');
+            $table->date('tanggal')->default("2024-01-01");
             $table->timestamps();
         });
     }

@@ -61,6 +61,6 @@ class GuestController extends Controller
         }
         // return redirect()->intended(route('warga-dashboard'));
 
-        return redirect()->back()->with('error', 'Invalid User ID or Password.');
+        return redirect()->back()->with('error', 'NIK atau Password anda salah.');
     }
 }

@@ -11,13 +11,13 @@
                     <h3 class="font-bold text-lg">Tambah Jadwal Posyandu</h3>
                     <hr>
                     {{-- <p class="py-4">Press ESC key or click the button below to close</p> --}}
-                    <form action="">
+                    <form action="{{route('jadwal')}}" method="POST">
                         @csrf
                         <label class="form-control w-full">
                             <div class="label">
                                 <span class="label-text">Tempat Posyandu</span>
                             </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full" required/>
+                            <input type="text" placeholder="Type here" class="input input-bordered w-full" name="tempat" id="tempat" required/>
                         </label>
 
                         <div class="flex">
@@ -26,7 +26,7 @@
                                     <div class="label">
                                         <span class="label-text">RT</span>
                                     </div>
-                                    <input type="number" placeholder="Type here" class="input input-bordered w-full" required/>
+                                    <input type="number" placeholder="Type here" class="input input-bordered w-full" name="rt" id="rt" required/>
                                 </label>
                             </div>
                             <div class="w-5"></div>
@@ -35,7 +35,7 @@
                                     <div class="label">
                                         <span class="label-text">RW</span>
                                     </div>
-                                    <input type="number" placeholder="Type here" class="input input-bordered w-full" required/>
+                                    <input type="number" placeholder="Type here" class="input input-bordered w-full" name="rw" id="rw" required/>
                                 </label>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                             <div class="label">
                                 <span class="label-text">Tanggal</span>
                             </div>
-                            <input type="date" placeholder="Type here" class="input input-bordered w-full" required/>
+                            <input type="date" placeholder="Type here" class="input input-bordered w-full" name="tanggal" id="tanggal" required/>
                         </label>
                         <div class="modal-action">
                           <button type="submit" class="btn hover:btn-success">Submit</button>
@@ -70,33 +70,28 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        @foreach ($jadwals as $jadwal)
                         <tr>
-                            <th>Balongsari</th>
-                            <td></td>
-                            <td></td>
+                            <td>{{$jadwal->tempat}}</td>
+                            <td>{{$jadwal->rt}}</td>
+                            <td>{{$jadwal->rw}}</td>
 
                             <td>
+                                {{$jadwal->tanggal}}
                             </td>
                             <td>
-                                <button class="btn btn-primary text-white">Edit</button>
-                                <button class="btn btn-primary text-white">Delete</button>
-                            </td>
-                            {{-- <td>Quality Control Specialist</td> --}}
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <th>Menganti</th>
-                            <td></td>
-                            <td></td>
-
-                            <td>
-                            </td>
-                            <td>
-                                <button class="btn btn-primary text-white">Edit</button>
-                                <button class="btn btn-primary text-white">Delete</button>
+                                {{-- tolong benarkan layout buttonnya --}}
+                                <form action="" method="post">
+                                    <button class="btn btn-primary text-white">Edit</button>
+                                </form>
+                                <form action="{{route('hapusjadwal',$jadwal->id)}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-primary text-white">Delete</button>
+                                </form>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
