@@ -12,7 +12,7 @@
         <h3 class="font-bold text-lg">Tambah Data Anak</h3>
         <hr>
         {{-- <p class="py-4">Press ESC key or click the button below to close</p> --}}
-        <form action="">
+        <form action="" method="POST">
           @csrf
           <div>
             <input type="hidden" name="role" id="role" value="2">
@@ -70,7 +70,7 @@
             <div class="label">
               <span class="label-text">Password</span>
             </div>
-            <input type="text" placeholder="Type here" class="input input-bordered w-full" required/>
+            <input type="password" placeholder="Type here" class="input input-bordered w-full" required/>
           </label>
           <div class="modal-action">
             <button type="submit" class="btn hover:btn-success">Submit</button>

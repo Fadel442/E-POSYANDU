@@ -28,6 +28,10 @@ class AdminController extends Controller
     {
         return view('admin.admin-laporanAnak');
     }
+    public function tambahAnak()
+    {
+        
+    }
     public function laporanBumil()
     {
         return view('admin.admin-laporanBumil');
