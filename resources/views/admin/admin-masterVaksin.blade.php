@@ -11,19 +11,19 @@
                     <h3 class="font-bold text-lg">Tambah Vaksin</h3>
                     <hr>
                     {{-- <p class="py-4">Press ESC key or click the button below to close</p> --}}
-                    <form action="">
+                    <form action="{{route('vaksin')}}" method="POST">
                         @csrf
                         <label class="form-control w-full">
                             <div class="label">
                                 <span class="label-text">Nama Vaksin</span>
                             </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full" required />
+                            <input type="text" name="vaksin" id="vaksin" placeholder="Type here" class="input input-bordered w-full" required />
                         </label>
                         <label class="form-control w-full">
                             <div class="label">
                                 <span class="label-text">Jumlah</span>
                             </div>
-                            <input type="number" placeholder="Type here" class="input input-bordered w-full" required />
+                            <input type="number" name="jumlah" id="jumlah" placeholder="Type here" class="input input-bordered w-full" required />
                         </label>
                         <div class="modal-action">
                             <button type="submit" class="btn hover:btn-success">Submit</button>
@@ -49,27 +49,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($vaksins as $vaksin)
 
                     <tr>
-                        <th></th>
-                        <td></td>
-                        <td></td>
+                        <td>{{$vaksin->id}}</td>
+                        <td>{{$vaksin->vaksin}}</td>
+                        <td>{{$vaksin->jumlah}}</td>
                         <td>
                             <button class="btn btn-primary text-white">Edit</button>
-                            <button class="btn btn-primary text-white">Delete</button>
+                            <form action="{{route('hapusvaksin',$vaksin->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-primary text-white">Delete</button>
+                            </form>
                         </td>
                         {{-- <td>Quality Control Specialist</td> --}}
                     </tr>
-                    <!-- row 2 -->
-                    <tr>
-                        <th></th>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <button class="btn btn-primary text-white">Edit</button>
-                            <button class="btn btn-primary text-white">Delete</button>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

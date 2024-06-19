@@ -15,7 +15,7 @@ Route::get('/', function () {
 
 Route::get('/home', [GuestController::class, 'landingPage'])->name('home');
 Route::get('/login', [AuthController::class, 'login'])->name('warga-login');
-Route::post('/dummylogin', [GuestController::class, 'loginWarga'])->name('loginwarga');
+Route::post('/login', [GuestController::class, 'loginWarga'])->name('loginwarga');
 Route::get('/alur-layanan', [GuestController::class, 'alurLayanan'])->name('alur-layanan');
 
 //warga
@@ -33,7 +33,11 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/daftar/bumil/laporan', [AdminController::class, 'laporanBumil'])->name('laporan-bumil');
     Route::get('/admin/master', [AdminController::class, 'adminMaster'])->name('master');
     Route::get('/admin/master/jadwal', [AdminController::class, 'adminJadwal'])->name('jadwal');
+    Route::post('/admin/master/jadwal', [JadwalController::class, 'addJadwal'])->name('addjadwal');
+    Route::delete('/admin/master/jadwal/{id}',[JadwalController::class, 'hapusJadwal'])->name('hapusjadwal');
     Route::get('/admin/master/vaksin', [AdminController::class, 'adminVaksin'])->name('vaksin');
+    Route::post('/admin/master/vaksin', [VaksinController::class, 'tambahVaksin'])->name('tambahvaksin');
+    Route::delete('/admin/master/vaksin/{id}',[VaksinController::class, 'hapusVaksin'])->name('hapusvaksin');
 
 
     // Route::get('/admin/user/baru', [GuestController::class, 'adminInputUser'])->name('user-baru');
