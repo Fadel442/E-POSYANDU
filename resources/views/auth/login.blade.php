@@ -1,5 +1,7 @@
 @extends('layouts.guest')
 
+@section('title', 'Sign In')
+
 @section('konten')
     <div class="flex w-full justify-between">
         <div class="flex items-start min-h-screen pl-10 w-[50%]">

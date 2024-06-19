@@ -1,5 +1,7 @@
     @extends('layouts.guest')
 
+    @section('title', 'E-POSYANDU')
+
 @section('konten')
 
     <div class="flex w-full justify-between">

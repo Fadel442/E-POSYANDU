@@ -1,5 +1,7 @@
 @extends('layouts.guest')
 
+@section('title', 'Layanan Publik')
+
 @section('konten')
 
 <div class="flex flex-wrap">

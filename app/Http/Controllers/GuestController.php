@@ -18,12 +18,14 @@ class GuestController extends Controller
 
     public function landingPage()
     {
-        return view('home');
+        $title = 'E-POSYANDU';
+        return view('home',compact('title'));
     }
 
     public function alurLayanan()
     {
-        return view('layanan publik');
+        $title = 'Layanan Publik';
+        return view('layanan publik',compact('title'));
     }
 
     public function registerWarga(Request $request)
