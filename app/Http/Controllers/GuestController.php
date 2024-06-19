@@ -43,7 +43,7 @@ class GuestController extends Controller
     public function loginWarga(Request $request)
     {
         $credentials = $request->validate([
-            'nik' => ['required'],
+            'userid' => ['required'],
             'password' => ['required'],
         ]);
 

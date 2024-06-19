@@ -23,12 +23,12 @@
                     </div>
                         <div class="grid gap-6 mb-6">
                             <div>
-                                <label class="text-sm font-medium text-[#333333]" for="">NIK</label><br>
-                                <input type="text" placeholder="" name="nik" id="nik"
+                                <label class="text-sm font-medium text-[#333333]" for="">ID Pengguna</label><br>
+                                <input type="text" placeholder="" name="userid" id="userid"
                                     class="bg-transparent border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" required/>
                             </div>
                             <div>
-                                <label class="text-sm font-medium text-[#333333]" for="">PASSWORD</label><br>
+                                <label class="text-sm font-medium text-[#333333]" for="">Kata Sandi</label><br>
                                 <input type="password" placeholder="" name="password" id="password"
                                     class="bg-transparent border border-black text-black text-sm rounded-lg  block w-full p-2.5 mt-1" required/>
                                 {{-- <div class="flex justify-end">
