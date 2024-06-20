@@ -18,16 +18,16 @@ class UserSeeder extends Seeder
         //jalankan seednya satu-satu
 
 
-        // User::updateOrCreate(
-        //     [
-        //         'userid' => '010003',
-        //         'name' => 'Jihadi Wafa Al-Farisi',
-        //         'nik' => '5201083008010003',
-        //         'password' => Hash::make('skibidigyatt'),
-        //         'role' => 0
-        //     ],
-        //     []
-        // );
+        User::updateOrCreate(
+            [
+                'userid' => '010003',
+                'name' => 'Jihadi Wafa Al-Farisi',
+                'nik' => '5201083008010003',
+                'password' => Hash::make('skibidigyatt'),
+                'role' => 0
+            ],
+            []
+        );
 
         // User::updateOrCreate(
         //     [

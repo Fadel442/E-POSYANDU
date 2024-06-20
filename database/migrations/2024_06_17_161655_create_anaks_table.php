@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('anaks', function (Blueprint $table) {
             $table->id();
+            $table->string('namaanak');
+            $table->string('namaibu');
+            $table->string('nik')->unique();
+            $table->string('alamat');
+            $table->string('rt');
+            $table->string('rw');
             $table->timestamps();
         });
     }

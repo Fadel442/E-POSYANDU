@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('jadwals', function (Blueprint $table) {
-            $table->string('hari')->after('bulan');
-            $table->date('tanggal')->default('2010-01-01')->after('hari');
-            $table->string('lokasi')->after('tanggal');
+        Schema::create('bumils', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('nik');
+            $table->string('alamat');
+            $table->string('rt');
+            $table->string('rw');
+            $table->timestamps();
         });
     }
 
@@ -23,8 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('jadwals', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('bumils');
     }
 };

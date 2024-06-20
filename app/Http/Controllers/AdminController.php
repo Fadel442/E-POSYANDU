@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Anak;
+use App\Models\Bumil;
 use App\Models\Jadwal;
 use App\Models\Vaksin;
 use Illuminate\Http\Request;
@@ -18,11 +20,13 @@ class AdminController extends Controller
     }
     public function daftarBumil()
     {
-        return view('admin.admin-daftarBumil');
+        $bumils = Bumil::all();
+        return view('admin.admin-daftarBumil',['bumils' => $bumils]);
     }
     public function daftarAnak()
     {
-        return view('admin.admin-daftarAnak');
+        $anaks = Anak::all();
+        return view('admin.admin-daftarAnak',['anaks' => $anaks]);
     }
     public function laporanAnak()
     {

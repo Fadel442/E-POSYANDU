@@ -12,7 +12,7 @@
         <h3 class="font-bold text-lg">Tambah Data Anak</h3>
         <hr>
         {{-- <p class="py-4">Press ESC key or click the button below to close</p> --}}
-        <form action="" method="POST">
+        <form action="{{route('anak')}}" method="POST">
           @csrf
           <div>
             <input type="hidden" name="role" id="role" value="2">
@@ -21,25 +21,25 @@
             <div class="label">
               <span class="label-text">Nama Anak</span>
             </div>
-            <input type="text" placeholder="Type here" class="input input-bordered w-full" required/>
+            <input type="text" name="namaanak" id="namaanak" placeholder="Type here" class="input input-bordered w-full" required/>
           </label>
           <label class="form-control w-full">
             <div class="label">
               <span class="label-text">Nama Ibu</span>
             </div>
-            <input type="text" placeholder="Type here" class="input input-bordered w-full" required/>
+            <input type="text" name="namaibu" id="namaibu" placeholder="Type here" class="input input-bordered w-full" required/>
           </label>
           <label class="form-control w-full">
             <div class="label">
               <span class="label-text">NIK</span>
             </div>
-            <input type="text" placeholder="Type here" class="input input-bordered w-full" required/>
+            <input type="text" name="nik" id="nik" placeholder="Type here" class="input input-bordered w-full" required/>
           </label>
           <label class="form-control w-full">
             <div class="label">
               <span class="label-text">Alamat</span>
             </div>
-            <input type="text" placeholder="Type here" class="input input-bordered w-full" required/>
+            <input type="text" name="alamat" id="alamat" placeholder="Type here" class="input input-bordered w-full" required/>
           </label>
           <div class="flex">
             <div class="flex 1 w-[50%]">
@@ -47,7 +47,7 @@
                 <div class="label">
                   <span class="label-text">RT</span>
                 </div>
-                <input type="number" placeholder="Type here" class="input input-bordered w-full" required/>
+                <input type="number" name="rt" name="rt" placeholder="Type here" class="input input-bordered w-full" required/>
               </label>
             </div>
             <div class="w-5"></div>
@@ -56,7 +56,7 @@
                 <div class="label">
                   <span class="label-text">RW</span>
                 </div>
-                <input type="number" placeholder="Type here" class="input input-bordered w-full" required/>
+                <input type="number" name="rw" id="rw" placeholder="Type here" class="input input-bordered w-full" required/>
               </label>
             </div>
           </div>
@@ -64,13 +64,13 @@
             <div class="label">
               <span class="label-text">User ID</span>
             </div>
-            <input type="text" placeholder="Enam angka terakhir NIK" class="input input-bordered w-full" required/>
+            <input type="text" name="userid" id="userid" placeholder="Enam angka terakhir NIK" class="input input-bordered w-full" required/>
           </label>
           <label class="form-control w-full">
             <div class="label">
               <span class="label-text">Password</span>
             </div>
-            <input type="password" placeholder="Type here" class="input input-bordered w-full" required/>
+            <input type="password" name="password" id="password" placeholder="Type here" class="input input-bordered w-full" required/>
           </label>
           <div class="modal-action">
             <button type="submit" class="btn hover:btn-success">Submit</button>
@@ -99,13 +99,13 @@
                 </tr>
               </thead>
               <tbody>
-               
+                @foreach ($anaks as $anak)
                 <tr>
-                  <th>Darlia</th>
-                  <td>Sofia</td>
-                  <td>Balongsari Tama</td>
-                  <td></td>
-                  <td></td>
+                  <th>{{$anak->namaanak}}</th>
+                  <td>{{$anak->namaibu}}</td>
+                  <td>{{$anak->alamat}}</td>
+                  <td>{{$anak->rt}}</td>
+                  <td>{{$anak->rw}}</td>
                   <td>
                     <a href="{{route('laporan-anak')}}">
                       <button class="btn btn-primary text-white">Laporan</button>
@@ -113,28 +113,15 @@
                   </td>
                   <td>
                       <button class="btn btn-primary text-white">Edit</button>
-                      <button class="btn btn-primary text-white">Delete</button>
-                  </td>
+                      <form action="{{route('hapusanak',$anak->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-primary text-white">Delete</button>
+                    </form>
                   {{-- <td>Quality Control Specialist</td> --}}
                 </tr>
+                @endforeach
                 <!-- row 2 -->
-                <tr>
-                    <th>Darlia</th>
-                    <td>Sofia</td>
-                    <td>Balongsari Tama</td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <a href="{{route('laporan-anak')}}">
-                        <button class="btn btn-primary text-white">Laporan</button>
-                      </a>
-                    </td>
-                    <td>
-                        <button class="btn btn-primary text-white">Edit</button>
-                        <button class="btn btn-primary text-white">Delete</button>
-                    </td>
-                    {{-- <td>Quality Control Specialist</td> --}}
-                  </tr>
                 <!-- row 3 -->
                 {{-- <tr>
                   <th>3</th>
