@@ -63,4 +63,9 @@ class GuestController extends Controller
 
         return redirect()->back()->with('error', 'NIK atau Password anda salah.');
     }
+
+    public function galeri()
+    {
+        return view('galeri');
+    }
 }

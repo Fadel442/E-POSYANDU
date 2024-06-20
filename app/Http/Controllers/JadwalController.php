@@ -7,7 +7,8 @@ use App\Models\Jadwal;
 
 class JadwalController extends Controller
 {
-    public function addJadwal(Request $request){
+    public function addJadwal(Request $request)
+    {
         $request->validate([
             'tempat' => 'required',
             'rt' => 'required',
@@ -20,10 +21,11 @@ class JadwalController extends Controller
         $jadwal->rw = $request->rw;
         $jadwal->tanggal = $request->tanggal;
         $jadwal->save();
-        return redirect('/admin/master/jadwal');
+        return back()->with('success', 'Data berhasil diubah bos');
     }
 
-    public function hapusJadwal(int $id){
+    public function hapusJadwal(int $id)
+    {
         $jadwal = Jadwal::findOrFail($id);
         $jadwal->delete();
 

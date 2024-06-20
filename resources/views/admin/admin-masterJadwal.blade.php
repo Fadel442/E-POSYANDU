@@ -50,7 +50,7 @@
                                 id="tanggal" required />
                         </label>
                         <div class="modal-action">
-                            <button type="submit" class="btn hover:btn-success">Submit</button>
+                            <button type="submit" class="btn hover:btn-success" id="submitBtn">Submit</button>
                     </form>
                     <form method="dialog">
                         <!-- if there is a button in form, it will close the modal -->
@@ -104,6 +104,16 @@
         </div>
     </div>
     </div>
+
+    @if (session('success'))
+    <script>
+        Swal.fire({
+            title: "Berhasil!",
+            text: "{{ session('success') }}",
+            icon: "success",
+        });
+    </script>
+@endif
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
