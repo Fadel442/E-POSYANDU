@@ -21,7 +21,7 @@ class JadwalController extends Controller
         $jadwal->rw = $request->rw;
         $jadwal->tanggal = $request->tanggal;
         $jadwal->save();
-        return back()->with('success', 'Data berhasil diubah bos');
+        return back()->with('success', 'Jadwal berhasil ditambahkan');
     }
 
     public function hapusJadwal(int $id)
