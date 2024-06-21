@@ -45,8 +45,8 @@ class GuestController extends Controller
     public function loginWarga(Request $request)
     {
         $credentials = $request->validate([
-            'userid' => ['required'],
-            'password' => ['required'],
+            'userid' => ['required','numeric','digits:6'],
+            'password' => ['required','string','min:8'],
         ]);
 
         if(Auth::attempt($credentials)){
