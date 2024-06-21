@@ -11,9 +11,13 @@
         @foreach ($posts as $post)
         <div class="bg-[#1A4D2E] m-5 p-2 rounded-lg px-5 mb-10">
             <div>
-                <p class="text-white font-bold text-3xl">{{$post->tempat}}</p>
-                <p class="text-white font-semibold text-m flex flex-wrap border-b border-white ">{{$post->tanggal}}</p>
-                <p class="text-white font-semibold text-sm mt-1 mb-2 ">RT {{$post->rt}}, RW {{$post->rw}}</p>
+                <p class="text-white font-bold text-3xl">Jadwal Posyandu</p>
+                <p class="text-white font-semibold text-m flex flex-wrap border-b border-white "></p>
+                <p class="text-white font-light text-sm mt-1 mb-4 ">{{$post->tempat}}</p>
+                <p class="text-white">{{$post->tanggal}}</p>
+                {{-- <div class="flex align-content-end">
+                    <a href="{{route ('detail-jadwal')}}" class="text-white font-semibold text-sm mt-2">Lihat Selengkapnya</a>
+                </div> --}}
             </div>
         </div>
         @endforeach

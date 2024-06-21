@@ -8,6 +8,7 @@ class AuthController extends Controller
 {
     public function Login()
     {
-        return view('auth.login');
+        $title = 'Sign In';
+        return view('auth.login',compact('title'));
     }
 }

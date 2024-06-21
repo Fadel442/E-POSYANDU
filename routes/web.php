@@ -1,20 +1,23 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AnakController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BidanController;
+use App\Http\Controllers\BumilController;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\VaksinController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\UserController;
+use App\Models\Bumil;
 
 Route::get('/', function () {
     return view('home');
 });
 
 Route::get('/home', [GuestController::class, 'landingPage'])->name('home');
-Route::get('/login', [AuthController::class, 'login'])->name('warga-login');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [GuestController::class, 'loginWarga'])->name('loginwarga');
 Route::get('/alur-layanan', [GuestController::class, 'alurLayanan'])->name('alur-layanan');
 
@@ -29,7 +32,11 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'adminDashboard'])->name('admin');
     Route::get('/admin/daftar', [AdminController::class, 'adminDaftar'])->name('daftar');
     Route::get('/admin/daftar/bumil', [AdminController::class, 'daftarBumil'])->name('bumil');
+    Route::post('/admin/daftar/bumil', [BumilController::class, 'tambahBumil'])->name('tambahbumil');
+    Route::delete('/admin/daftar/bumil/{id}',[BumilController::class, 'hapusBumil'])->name('hapusbumil');
     Route::get('/admin/daftar/anak', [AdminController::class, 'daftarAnak'])->name('anak');
+    Route::post('/admin/daftar/anak', [AnakController::class, 'tambahAnak'])->name('tambahanak');
+    Route::delete('/admin/daftar/anak/{id}',[AnakController::class, 'hapusAnak'])->name('hapusanak');
     Route::get('/admin/daftar/anak/laporan', [AdminController::class, 'laporanAnak'])->name('laporan-anak');
     Route::get('/admin/daftar/bumil/laporan', [AdminController::class, 'laporanBumil'])->name('laporan-bumil');
     Route::get('/admin/master', [AdminController::class, 'adminMaster'])->name('master');
