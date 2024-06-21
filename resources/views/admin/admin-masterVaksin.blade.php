@@ -55,15 +55,14 @@
                         <td>{{$vaksin->id}}</td>
                         <td>{{$vaksin->vaksin}}</td>
                         <td>{{$vaksin->jumlah}}</td>
-                        <td>
-                            <button class="btn btn-primary text-white">Edit</button>
+                        <td class="flex justify-center">
+                            <button class="btn btn-primary text-white w-[100px] mr-5">Edit</button>
                             <form action="{{route('hapusvaksin',$vaksin->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-primary text-white">Delete</button>
+                                <button class="btn btn-primary text-white w-[100px] delete-btn">Delete</button>
                             </form>
                         </td>
-                        {{-- <td>Quality Control Specialist</td> --}}
                     </tr>
                     @endforeach
                 </tbody>
@@ -71,4 +70,40 @@
         </div>
     </div>
     </div>
+
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                title: "Berhasil!",
+                text: "{{ session('success') }}",
+                icon: "success",
+            });
+        </script>
+    @endif
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menggunakan event delegation untuk handle klik tombol delete
+            document.addEventListener('click', function(event) {
+                if (event.target.classList.contains('delete-btn')) {
+                    event.preventDefault();
+                    var form = event.target.closest("form");
+
+                    Swal.fire({
+                        title: "Apakah Anda yakin?",
+                        text: "Anda tidak akan dapat mengembalikan ini!",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Ya, hapus!"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit(); // Submit form jika dikonfirmasi
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 @endsection

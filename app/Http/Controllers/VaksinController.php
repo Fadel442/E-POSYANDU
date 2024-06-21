@@ -17,7 +17,7 @@ class VaksinController extends Controller
         $data['jumlah'] = (int) $request->jumlah;
         // Warga::create($data);
         Vaksin::create($data);
-        return redirect()->route('vaksin');
+        return back()->with('success', 'Vaksin berhasil ditambahkan');
     }
 
     public function hapusVaksin(int $id){

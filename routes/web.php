@@ -21,6 +21,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [GuestController::class, 'loginWarga'])->name('loginwarga');
 Route::get('/alur-layanan', [GuestController::class, 'alurLayanan'])->name('alur-layanan');
 
+
 //warga
 
 //admin
