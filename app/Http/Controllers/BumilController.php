@@ -39,13 +39,13 @@ class BumilController extends Controller
 
         $anak = Bumil::create($bumil_data);
 
-        return redirect()->route('bumil');
+        return back()->with('success', 'Data Bumil berhasil ditambahkan');
     }
 
     public function hapusBumil(int $id){
         $anak = Bumil::findOrFail($id);
         $anak->delete();
 
-        return redirect()->route('bumil')->with('success', 'anak deleted successfully.');
+        return redirect()->route('bumil')->with('success', 'Bumil deleted successfully.');
     }
 }

@@ -43,7 +43,7 @@ class AnakController extends Controller
 
         $anak = Anak::create($anak_data);
 
-        return redirect()->route('anak');
+        return back()->with('success', 'Data Anak berhasil ditambahkan');
     }
 
     public function hapusAnak(int $id){

@@ -46,7 +46,7 @@ class GuestController extends Controller
     {
         $credentials = $request->validate([
             'userid' => ['required','numeric','digits:6'],
-            'password' => ['required','string','min:8'],
+            'password' => ['required','string','min:6'],
         ]);
 
         if(Auth::attempt($credentials)){
