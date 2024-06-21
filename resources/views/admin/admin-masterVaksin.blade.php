@@ -71,6 +71,16 @@
     </div>
     </div>
 
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                title: "Berhasil!",
+                text: "{{ session('success') }}",
+                icon: "success",
+            });
+        </script>
+    @endif
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Menggunakan event delegation untuk handle klik tombol delete
